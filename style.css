@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&family=Rubik+Bubbles&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.img-gen{
+  height: 40vh;
+  background: url("/AI_IMAGE_GENERATOR/images/bgai.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.img-gen::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  opacity: 0.5;
+}
+
+.img-gen .content{
+  color: white;
+  padding: 0 15px;
+  max-width: 760;
+  text-align: center;
+  position: relative;
+}
+
+.img-gen h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.img-gen p{
+  font-size: 1.35rem;
+  margin-top: 10px;
+}
+
+.img-gen .gen-form{
+  height: 56px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px;
+  background: whitesmoke;
+  margin: 45px 0 15px;
+  padding: 6px
+}
+
+.gen-form .prompt-inp{
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 15px;
+}
+
+.gen-form .controls{
+  display: flex;
+  height: 100%;
+  gap: 15px; 
+}
+
+.gen-form .img-qty{
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1rem;
+}
+
+.gen-form .gen-btn{
+  outline: none;
+  border: none;
+  background:rgb(3, 27, 27);
+  color: blanchedalmond;
+  border-radius: 20px;
+  padding: 0 25px;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.img-gal{
+  display: flex;
+  gap: 15px;
+  padding: 0 15px;
+  max-width: 100%;
+  margin: 50px auto ;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img-gal .img-c{
+  width: 285px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  background: rgb(240, 230, 230);
+}
+
+.img-gal .img-c img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-gal .img-c.loading img{
+  width: 80px;
+  height: 80px;
+}
+
+.img-gal .img-c .dl-btn{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: whitesmoke;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-gal .img-c:not(.loading):hover .dl-btn{
+  display: flex;
+}
+
+.img-gal .img-c .dl-btn img{
+  width: 14px;
+  height: 14px;
+}
+
+@media  screen and (max-width: 760px) {
+  .img-gen h1{
+    font-size: 1.6rem;
+  }
+
+  .img-gen p{
+    font-size: 1rem;
+  }
+
+  .img-gen .gen-form{
+    margin-top: 30px;
+    height: 52px;
+    display: block;
+  }
+
+  .gen-form .controls{
+    height: 40px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .gen-form .img-qty{
+    color: whitesmoke;
+  }
+
+  .gen-form .img-qty option{
+    color: black;
+  }
+
+  .gen-form .gen-btn{
+    height: 100%;
+  }
+
+  .img-gal .img-c:not(.loading):hover .dl-btn{
+    display: flex;
+  }
+
+  .img-gal{
+    margin-top: 30px;
+  }
+}
+
+@media  screen and (max-width: 550px){
+  .img-gal .img-c{
+    width: 100%;
+  }
+}
