@@ -1,4 +1,3 @@
-// import fetch from 'node-fetch';
 const genForm = document.querySelector(".gen-form");
 const imgGallery = document.querySelector(".img-gal");
 const genBtn = genForm.querySelector(".gen-btn");
