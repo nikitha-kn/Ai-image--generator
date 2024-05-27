@@ -3,8 +3,7 @@ const genForm = document.querySelector(".gen-form");
 const imgGallery = document.querySelector(".img-gal");
 const genBtn = genForm.querySelector(".gen-btn");
 
-const token= "sk-rmIcLCNH1BasPMzzweba5T29GRYQWrRCwIkKIQBo4eIy1WCR";
-;
+const token= "API_KEY";
 let isImageGenerating = false;
 
 const updateImgCard = (imgDataArray) => {
